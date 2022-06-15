@@ -1,0 +1,168 @@
+:root{
+    --black: #1a191a;
+    --white: rgb(255, 255, 255);
+    --grey: rgb(180, 180, 180);
+    --background-color: #ffffff;
+    --primary: #030718;
+    --secondary: #5b8181;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Oswald',sans-serif;
+    background-color: var(--background-color);
+}
+header{
+    font-family: 'Oswald',sans-serif;
+    padding: 1rem 4% 0rem;
+    position: fixed;
+    top: 0;
+    background-color: var(--background-color);
+    width: 100%;
+    z-index: 1;
+}
+main{
+    margin-top: 10rem;
+}
+h1{
+    font-size: 4rem;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+h2{
+    font-size: 3rem;
+    font-weight: 400;
+}
+h3{
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--grey);
+}
+header .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+header .logo {
+    font-family: 'Bebas Neue',sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+}
+nav .links ul{
+    display: flex;
+    list-style: none;
+}
+nav .links li{
+    display: block;
+    padding: 1rem;
+}
+nav .links a{
+    padding: .7rem;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 400;
+}
+.nav-cta button{
+    letter-spacing: .1rem;
+    font-family: 'Oswald',sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    border: none;
+    padding: .5rem 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.banner .content{
+    text-align: center;
+    line-height: 1;
+    width: 90%;
+    margin-bottom: 1.5rem;
+}
+.banner .cta-section{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+.cta-section .email-bar{
+    display: flex;
+    box-shadow: -3px 3px 10px var(--grey);
+    width: 50%;
+}
+.cta-section .email-bar input{
+    font-size: 1rem;
+    background-color: var(--background-color);
+    border: none;
+    width: 80%;
+    padding: 1rem;
+}
+.cta-section .email-bar button{
+    border: none;
+    height: 100%;
+    font-size: 1rem;
+    width: 20%;
+    background-color: var(--primary);
+    color: var(--white);
+}
+.mission-section{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+.mission-section .image-container{
+    max-width: 200px;
+}
+.mission-section img{
+    width: 100%;
+}
+.mission-section .mission-statement{
+    padding: 2rem;
+}
+.gallery{
+    color: var(--white);
+    background-color: var(--primary);
+    letter-spacing: .1rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2.5% 5%;
+}
+.gallery .images-container{
+    display: grid;
+    grid-template: repeat(2, 1fr)/repeat(4,1fr);
+    gap: .5rem .5rem;
+    width: 60%;
+}
+.gallery .supporting-text{
+    max-width: 500px;
+    text-align: left;
+    margin-left: 5rem;
+}
+.gallery h1{
+    letter-spacing: .2rem;
+    line-height: 1.3;
+}
+.gallery p{
+    color: var(--grey);
+    font-weight: 300;
+}
+.gallery img{
+    width: 100%;
+    max-width: 500px;
+}
