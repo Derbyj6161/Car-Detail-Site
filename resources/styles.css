@@ -5,6 +5,7 @@
     --background-color: #ffffff;
     --primary: #030718;
     --secondary: #5b8181;
+    --cultured: #f2f4f3;
 }
 
 *{
@@ -43,6 +44,9 @@ h3{
     font-weight: 300;
     color: var(--grey);
 }
+.card{
+    box-shadow: -1px 1px 7px var(--grey);
+}
 header .content{
     display: flex;
     align-items: center;
@@ -54,6 +58,9 @@ header .logo {
     font-size: 2.5rem;
     text-transform: uppercase;
     border-bottom: 2px solid black;
+}
+.logo span{
+    color: var(--secondary);
 }
 nav .links ul{
     display: flex;
@@ -86,52 +93,27 @@ nav .links a{
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 .banner .content{
     text-align: center;
-    line-height: 1;
     width: 90%;
     margin-bottom: 1.5rem;
 }
-.banner .cta-section{
-    display: flex;
-    justify-content: center;
-    width: 90%;
+
+.spotlight-message{
+    background-color: var(--secondary);
+    color: var(--cultured);
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    text-align: center;
 }
-.cta-section .email-bar{
-    display: flex;
-    box-shadow: -3px 3px 10px var(--grey);
-    width: 50%;
+.spotlight-message a{
+    color: var(--cultured);
 }
-.cta-section .email-bar input{
-    font-size: 1rem;
-    background-color: var(--background-color);
-    border: none;
-    width: 80%;
-    padding: 1rem;
-}
-.cta-section .email-bar button{
-    border: none;
-    height: 100%;
-    font-size: 1rem;
-    width: 20%;
-    background-color: var(--primary);
-    color: var(--white);
-}
-.mission-section{
-    padding: 5%;
-    display: flex;
-    justify-content: center;
-}
-.mission-section .image-container{
-    max-width: 200px;
-}
-.mission-section img{
-    width: 100%;
-}
-.mission-section .mission-statement{
-    padding: 2rem;
+.spotlight-message a:hover{
+    cursor: pointer;
 }
 .gallery{
     color: var(--white);
@@ -155,6 +137,7 @@ nav .links a{
     margin-left: 5rem;
 }
 .gallery h1{
+    font-weight: 400;
     letter-spacing: .2rem;
     line-height: 1.3;
 }
@@ -165,4 +148,84 @@ nav .links a{
 .gallery img{
     width: 100%;
     max-width: 500px;
+}
+.testimonials{
+    background-color: var(--secondary);
+    padding: 2rem 1rem;
+    background-color: var(--cultured);
+}
+.testimonials .cards-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+.testimonials .card{
+    color: var(--primary);
+    background-color: var(--background-color);
+    max-width: 500px;
+    padding: 2rem 2rem 0rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    height: fit-content;
+}
+.testimonials .card .content{
+    min-height: 150px;
+}
+.testimonials .card .reviewer-name{
+    color: var(--secondary);
+    margin-top: 1rem;
+    border-top: 1px solid var(--grey);
+    padding: 1rem;
+}
+.testimonials h2{
+    margin-top: 0;
+    text-align: center;
+    color: var(--primary);
+    font-weight: 300;
+}
+.company-info{
+    background-color: var(--secondary);
+    color: var(--cultured);
+    padding: 0 5%;
+}
+.company-info .content{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+.company-info .content .column{
+    text-align: center;
+}
+.company-info .content .column h2{
+    padding-bottom: .1rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--primary);
+}
+.company-info .content .column .cta-button{
+    background-color: var(--cultured);
+    color: var(--primary);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+.company-info .content .column .info{
+    font-size: 1.5rem;
+}
+.company-info .content #schedule{
+    display: flex;
+}
+#schedule ul{
+    list-style: none;
+    padding: 0 1rem;
+    margin: 0;
+    text-align: left;
+}
+footer{
+    background-color: var(--primary);
+    color: var(--cultured);
+    padding: 1rem 2rem;
+}
+footer .logo{
+    font-family: 'Bebas neue';
+    font-size: 2rem;
 }
