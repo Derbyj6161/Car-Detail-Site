@@ -51,7 +51,7 @@ header .content{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 header .logo {
     font-family: 'Bebas Neue',sans-serif;
@@ -80,13 +80,17 @@ nav .links a{
     letter-spacing: .1rem;
     font-family: 'Oswald',sans-serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border: none;
     padding: .5rem 1rem;
     background-color: var(--primary);
     color: var(--white);
+    transition: all .2s ease-out;
 }
-
+.nav-cta button:hover{
+    color: var(--background-color);
+    background-color: var(--secondary);
+}
 .banner{
     display: flex;
     flex-direction: column;
@@ -207,7 +211,23 @@ nav .links a{
     color: var(--primary);
     padding: 1rem;
     margin-bottom: 1.5rem;
+    transition: all .2s ease-out;
 }
+.company-info .content .column .cta-button:hover{
+    background-color: var(--primary);
+    color: var(--cultured);
+    cursor: pointer;
+}
+.company-info .content .column a{
+    color: var(--primary);
+    text-decoration: none;
+    transition: all .2s ease-out;
+}
+.company-info .content .column .cta-button:hover a{
+    color: var(--cultured);
+}
+.company-info .content .column
+
 .company-info .content .column .info{
     font-size: 1.5rem;
 }
@@ -223,9 +243,34 @@ nav .links a{
 footer{
     background-color: var(--primary);
     color: var(--cultured);
-    padding: 1rem 2rem;
+    padding: 2rem 5%;
+}
+footer .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 footer .logo{
     font-family: 'Bebas neue';
+    font-size: 2rem;
+    padding-top: 1rem;
+
+}
+footer .social-container{
+    display: flex;
+    align-items: center;
+}
+.social-container h3, i{
+    margin-right: 1rem;
+    color: var(--cultured);
+}
+footer .social-container h3{
+    padding: 0;
+
+}
+footer a{
+    color: var(--cultured);
+}
+footer i{
     font-size: 2rem;
 }
