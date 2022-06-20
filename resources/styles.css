@@ -8,6 +8,7 @@
     --cultured: #f2f4f3;
 }
 
+
 *{
     box-sizing: border-box;
 }
@@ -18,15 +19,7 @@ body{
     font-family: 'Oswald',sans-serif;
     background-color: var(--background-color);
 }
-header{
-    font-family: 'Oswald',sans-serif;
-    padding: 1rem 4% 0rem;
-    position: fixed;
-    top: 0;
-    background-color: var(--background-color);
-    width: 100%;
-    z-index: 1;
-}
+
 main{
     margin-top: 10rem;
 }
@@ -47,34 +40,63 @@ h3{
 .card{
     box-shadow: -1px 1px 7px var(--grey);
 }
-header .content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.5rem;
+nav{
+    width: 100%;
+    color: var(--primary);
+    position: fixed;
+    top: 0rem;
+    background-color: var(--background-color);
 }
-header .logo {
-    font-family: 'Bebas Neue',sans-serif;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    border-bottom: 2px solid black;
-}
-.logo span{
+.green-text{
     color: var(--secondary);
 }
-nav .links ul{
+
+.navbar{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary);
+    padding: 1rem 2rem;
+}
+.nav-brand{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li{
+    font-family: 'Oswald', sans-serif;
     list-style: none;
-}
-nav .links li{
+    font-size: 1.5rem;
+    font-weight: 300;
     display: block;
-    padding: 1rem;
+    padding: 1rem 1.2rem;
 }
-nav .links a{
-    padding: .7rem;
-    color: var(--black);
+.navbar-links li a{
     text-decoration: none;
-    font-weight: 400;
+    color: var(--primary);   
+}
+.navbar-links li a:hover{
+    color: var(--secondary);
+}
+.toggle-button{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 23px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 10px;
 }
 .nav-cta button{
     letter-spacing: .1rem;
@@ -86,6 +108,7 @@ nav .links a{
     background-color: var(--primary);
     color: var(--white);
     transition: all .2s ease-out;
+    cursor: pointer;
 }
 .nav-cta button:hover{
     color: var(--background-color);
@@ -166,7 +189,7 @@ nav .links a{
 .testimonials .card{
     color: var(--primary);
     background-color: var(--background-color);
-    max-width: 500px;
+    max-width: 800px;
     padding: 2rem 2rem 0rem;
     margin: 1rem;
     font-size: 1.5rem;
@@ -226,7 +249,6 @@ nav .links a{
 .company-info .content .column .cta-button:hover a{
     color: var(--cultured);
 }
-.company-info .content .column
 
 .company-info .content .column .info{
     font-size: 1.5rem;
@@ -273,4 +295,73 @@ footer a{
 }
 footer i{
     font-size: 2rem;
+}
+
+/*media queries*/
+
+
+@media only screen and (max-width: 1000px){
+    .gallery .images-container{
+        grid-template: repeat(4, 1fr)/repeat(2,1fr);
+        padding: 2rem 0rem;
+    }
+    .testimonials .cards-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .nav-cta{
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li{
+        text-align: center;
+        padding: .7rem 1rem;
+        border-top: 1px solid white;
+    }
+    .navbar-links.active{
+        display: flex;
+    }
+    .hero-section{
+        flex-direction: column;
+    }
+    .hero-text{
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+@media only screen and (max-width: 700px){
+    .gallery{
+        flex-direction: column-reverse;
+    }
+    .gallery .supporting-text{
+        text-align: center;
+        margin: .5rem;
+    }
+    .company-info .content{
+        flex-direction: column;
+ 
+    }
+    .company-info #schedule{
+        justify-content: center;
+    }
 }
