@@ -233,7 +233,7 @@ nav{
     background-color: var(--cultured);
     color: var(--primary);
     padding: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
     transition: all .2s ease-out;
 }
 .company-info .content .column .cta-button:hover{
